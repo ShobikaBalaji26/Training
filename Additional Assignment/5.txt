@@ -1,0 +1,15 @@
+Develop a number guessing game where the program randomly generates a number between 1 and 100. The user has to guess the number, and the program provides feedback (higher, lower, or correct) after each guess. Use a loop to allow the user to keep guessing until they correctly guess the number.
+
+start
+Generate random number between 1 and 100 and save it as secret number
+ Print "Guess the number between 1 and 100"
+ Loop:
+   1. Ask user for a guess
+   2. If guess == secret_number:
+      Print "Congratulations! You guessed it!"
+      End loop
+   3. If guess < secret_number:
+      Print "Too low! Guess higher."
+   4. If guess > secret_number:
+      Print "Too high! Guess lower."
+end

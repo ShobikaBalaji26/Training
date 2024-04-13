@@ -1,0 +1,18 @@
+Write a program that calculates the discount amount for a product based on the following criteria:
+If the product price is over $100 and the customer is a premium member, they get a 20% discount.
+If the product price is over $100 and the customer is not a premium member, they get a 10% discount.
+If the product price is $100 or less, there is no discount.
+Prompt the user to input the product price and their premium membership status, then use complex logical expressions to calculate and output the discount amount.
+
+start
+Prompt user to enter product price and store as product_price
+ Prompt user to enter premium membership status (yes/no) and store as is_premium_member
+ If product_price > 100:
+   - If is_premium_member == 'yes':
+     - Calculate discount_amount = 0.20 * product_price
+   - Else:
+     - Calculate discount_amount = 0.10 * product_price
+ Else:
+   - Set discount_amount = 0
+ Print "Discount amount: $" + formatted discount_amount with two decimal places
+end

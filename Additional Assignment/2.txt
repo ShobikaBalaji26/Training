@@ -1,0 +1,36 @@
+Day of the Week:
+		Write a program that prompts the user to enter a number between 1 and 7 representing a day of the week (1 for Sunday, 2 for Monday, and so on). Use a switch statement to determine the day entered by the user and output the corresponding day name. If the user enters a number outside the range of 1-7, display an error message.
+
+1. Start
+
+2. Display "Day of the Week Finder"
+3. Display "Enter a number between 1 and 7:"
+4. Input dayNumber
+
+5. Switch (dayNumber)
+6.    Case 1:
+7.        Display "Sunday"
+8.        Break
+9.    Case 2:
+10.       Display "Monday"
+11.       Break
+12.    Case 3:
+13.       Display "Tuesday"
+14.       Break
+15.    Case 4:
+16.       Display "Wednesday"
+17.       Break
+18.    Case 5:
+19.       Display "Thursday"
+20.       Break
+21.    Case 6:
+22.       Display "Friday"
+23.       Break
+24.    Case 7:
+25.       Display "Saturday"
+26.       Break
+27.    Default:
+28.       Display "Error: Invalid input. Please enter a number between 1 and 7."
+29. End Switch
+
+30. End

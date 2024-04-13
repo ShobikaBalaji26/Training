@@ -1,0 +1,20 @@
+Develop a program that checks whether a given string is a palindrome or not. A palindrome is a word, phrase, number, or other sequence of characters that reads the same backward as forward (e.g., "radar" or "madam"). Prompt the user to enter a string, then use a loop to compare characters from the beginning and end of the string to determine if it's a palindrome.
+
+
+
+start
+Prompt user to enter a string and store as string
+ Set start to 0
+ Set end to length of string - 1
+ Set is_palindrome to True
+ While start < end:
+   1. If string[start] != string[end]:
+      Set is_palindrome to False
+      Break
+   2. Increment start
+   3. Decrement end
+ If is_palindrome is True:
+      Print string is a palindrome
+   Else:
+      Print string is not a palindrome
+end

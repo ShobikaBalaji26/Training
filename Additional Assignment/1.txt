@@ -1,0 +1,23 @@
+1. Start
+
+2. Display "Temperature Converter"
+3. Display "1. Celsius to Fahrenheit"
+4. Display "2. Fahrenheit to Celsius"
+5. Display "Enter your choice (1 or 2):"
+6. Input choice
+
+7. If choice is 1 Then
+8.    Display "Enter temperature in Celsius:"
+9.    Input celsiusTemp
+10.    Set fahrenheitTemp = (celsiusTemp * 9/5) + 32
+11.    Display "Temperature in Fahrenheit is:", fahrenheitTemp
+12. Else If choice is 2 Then
+13.    Display "Enter temperature in Fahrenheit:"
+14.    Input fahrenheitTemp
+15.    Set celsiusTemp = (fahrenheitTemp - 32) * 5/9
+16.    Display "Temperature in Celsius is:", celsiusTemp
+17. Else
+18.    Display "Invalid choice. Please enter 1 or 2."
+19. End If
+
+20. End

@@ -1,0 +1,11 @@
+Write a program to generate the Fibonacci sequence up to a specified number of terms. The Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum of the two preceding numbers (0, 1, 1, 2, 3, 5, 8, 13, ...). Prompt the user to enter the number of terms they want to generate and use a loop to calculate and output the sequence.
+ 
+
+start
+ Ask user for number of terms and store as num terms
+ Set a to 0 and b to 1
+ For i from 0 to num terms - 1:
+   1. Compute c = a + b
+   2. Print c
+   3. Set a to b
+   4. Set b to c

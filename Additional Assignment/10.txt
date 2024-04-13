@@ -1,0 +1,17 @@
+	Design a program that evaluates whether a person is approved for a credit card based on the following criteria:
+Minimum credit score requirement: 700
+Maximum debt-to-income ratio: 30%
+No recent bankruptcies (within the last 5 years)
+Prompt the user to input their credit score, debt amount, income amount, and bankruptcy status, then use complex logical expressions to determine and output whether they are approved for the credit card.
+
+start
+ Prompt user to enter credit score and store as credit_score
+ Prompt user to enter total debt amount and store as debt
+ Prompt user to enter annual income amount and store as income
+ Prompt user to enter bankruptcy status (yes/no) and store as bankruptcy
+ Calculate debt_to_income_ratio = (debt / income) * 100
+ If credit_score >= 700 AND debt_to_income_ratio <= 30 AND bankruptcy == 'no':
+   - Print "Congratulations! You are approved for the credit card."
+   Else:
+   - Print "Sorry, you are not approved for the credit card."
+end

@@ -1,0 +1,15 @@
+Develop a program that assesses whether an employee is eligible for a promotion based on the following criteria:
+Must have worked for the company for at least 5 years.
+Must have a performance rating of "excellent."
+Must have completed at least one advanced training program.
+Prompt the user to input their years of service, performance rating, and training status, then use complex logical expressions to determine and output whether they are eligible for promotion.
+
+start
+ Prompt user to enter years of service and store as years_of_service
+ Prompt user to enter performance rating and store as performance_rating
+ Prompt user to enter training status (yes/no) and store as training_status
+ If years_of_service >= 5 AND performance_rating == 'excellent' AND training_status == 'yes':
+   - Print "Congratulations! You are eligible for a promotion."
+   Else:
+   - Print "Sorry, you are not eligible for a promotion."
+end

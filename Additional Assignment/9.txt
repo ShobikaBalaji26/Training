@@ -1,0 +1,14 @@
+ Create a program that determines whether a person is eligible to vote in an election based on the following criteria:
+Age must be 18 or above.
+Must be a citizen of the country.
+Prompt the user to input their age, citizenship status (yes/no), and felony status (yes/no), and then use complex logical expressions to determine and output whether they are eligible to vote.
+ 
+start
+ Prompt user to enter age and store as age
+ Prompt user to enter citizenship status (yes/no) and store as citizenship
+ Prompt user to enter felony status (yes/no) and store as felony
+ If age >= 18 AND citizenship == 'yes' AND felony == 'no':
+   - Print "You are eligible to vote."
+   Else:
+   - Print "You are not eligible to vote."
+end
