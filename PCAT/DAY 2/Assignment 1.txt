@@ -1,0 +1,48 @@
+Assignment 1: Pseudocode and Flowchart for Sorting Algorithm - Write pseudocode and create a flowchart for a bubble sort algorithm. Provide a brief explanation of how the algorithm works and a simple array of integers to demonstrate a dry
+ run of your algorithm.
+
+function bubbleSort(arr):
+    n = length of arr
+    for i from 0 to n-1:
+        for j from 0 to n-i-1:
+            if arr[j] > arr[j+1]:
+                swap(arr[j], arr[j+1])
+    return arr
+
+ [5, 3, 8, 4, 2].
+
+Initial Array: [5, 3, 8, 4, 2]
+
+First Pass:
+
+Compare 5 and 3 -> Swap [3, 5, 8, 4, 2]
+Compare 5 and 8 -> No Swap
+Compare 8 and 4 -> Swap [3, 5, 4, 8, 2]
+Compare 8 and 2 -> Swap [3, 5, 4, 2, 8]
+Second Pass:
+
+Compare 3 and 5 -> No Swap
+Compare 5 and 4 -> Swap [3, 4, 5, 2, 8]
+Compare 5 and 2 -> Swap [3, 4, 2, 5, 8]
+Compare 5 and 8 -> No Swap
+Third Pass:
+
+Compare 3 and 4 -> No Swap
+Compare 4 and 2 -> Swap [3, 2, 4, 5, 8]
+Compare 4 and 5 -> No Swap
+Fourth Pass:
+
+Compare 3 and 2 -> Swap [2, 3, 4, 5, 8]
+Compare 3 and 4 -> No Swap
+Fifth Pass:
+
+Compare 2 and 3 -> No Swap
+Sorted Array: [2, 3, 4, 5, 8]
+
+
+
+
+
+
+
+

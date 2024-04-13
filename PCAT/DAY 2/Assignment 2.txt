@@ -1,0 +1,41 @@
+Assignment 2: Recursive Function and Efficiency Analysis - Write a recursive function pseudocode and calculate the nth Fibonacci number and use Big O notation to analyze its efficiency. Compare this with an iterative approach and discuss the
+ pros and cons in terms of space and time complexity.
+
+function fibonacciRecursive(n):
+    if n <= 0:
+        return "Fibonacci sequence is not defined for non-positive integers."
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return fibonacciRecursive(n-1) + fibonacciRecursive(n-2)
+
+function fibonacciIterative(n):
+    if n <= 0:
+        return "Fibonacci sequence is not defined for non-positive integers."
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        fib = [0, 1]
+        for i from 2 to n:
+            fib[i] = fib[i-1] + fib[i-2]
+        return fib[n-1] + fib[n-2]
+
+ Time Complexity
+ Pros:
+Simplicity: The recursive approach is straightforward and easy to understand.
+
+Cons:
+Inefficiency: The time complexity of \(O(2^n)\) makes it highly inefficient for large values of \(n\).
+
+Space Complexity
+
+ Pros:
+Constant Space: The recursive approach has a space complexity of \(O(1)\) for storing intermediate results.
+
+Cons:
+Stack Space: The recursive calls are stored on the call stack, which can lead to stack overflow errors for large values of \(n\).
+
