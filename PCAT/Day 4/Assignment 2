@@ -1,16 +1,20 @@
 Create a program that simulates a simple calculator using command-line arguments to perform and print the result of addition, subtraction, multiplication, and division..
 
+import java.util.Scanner;
+
 public class SimpleCalculator {
     
     public static void main(String[] args) {
-        if (args.length != 3) {
-            System.out.println("Usage: java SimpleCalculator <number1> <operator> <number2>");
-            return;
-        }
+        Scanner scanner = new Scanner(System.in);
         
-        double num1 = Double.parseDouble(args[0]);
-        String operator = args[1];
-        double num2 = Double.parseDouble(args[2]);
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+        
+        System.out.print("Enter the operator (+, -, *, /): ");
+        String operator = scanner.next();
+        
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
         
         double result = 0;
         
@@ -29,14 +33,18 @@ public class SimpleCalculator {
                     result = num1 / num2;
                 } else {
                     System.out.println("Error: Division by zero is not allowed.");
+                    scanner.close();
                     return;
                 }
                 break;
             default:
                 System.out.println("Error: Invalid operator.");
+                scanner.close();
                 return;
         }
         
         System.out.println("Result: " + result);
+        
+        scanner.close();
     }
 }
