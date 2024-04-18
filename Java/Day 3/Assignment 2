@@ -1,0 +1,83 @@
+a . Implement a method SliceArray that takes an array, a starting index, and an end index, then returns a new array containing the elements from the start to the end index.
+
+
+public class ArraySlicer {
+    
+    public static int[] sliceArray(int[] arr, int start, int end) {
+  
+        if (start < 0 || end >= arr.length || start > end) {
+            throw new IllegalArgumentException("Invalid start or end index");
+        }
+
+        int length = end - start + 1;
+
+        int[] slicedArray = new int[length];
+        
+    
+        for (int i = start, j = 0; i <= end; i++, j++) {
+            slicedArray[j] = arr[i];
+        }
+        
+        return slicedArray;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int start = 2;
+        int end = 6;
+        
+        int[] slicedArray = sliceArray(arr, start, end);
+        
+       
+        System.out.print("Sliced array: ");
+        for (int num : slicedArray) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
+b. Create a recursive function to find the nth element of a Fibonacci sequence and store the first n elements in an array
+
+public class Fibonacci {
+    
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n; 
+        }
+        
+   
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+    
+    public static int[] fibonacciArray(int n) {
+        if (n <= 0) {
+            throw new IllegalArgumentException("Invalid input. n should be greater than zero.");
+        }
+        
+        int[] fibArray = new int[n];
+        
+     
+        for (int i = 0; i < n; i++) {
+            fibArray[i] = fibonacci(i);
+        }
+        
+        return fibArray;
+    }
+
+    public static void main(String[] args) {
+        int n = 10; // Find the 10th Fibonacci number and store the first 10 Fibonacci numbers
+        
+        int nthFibonacci = fibonacci(n - 1); 
+        int[] fibArray = fibonacciArray(n);
+        
+    
+        System.out.println("The " + n + "th Fibonacci number is: " + nthFibonacci);
+        
+        System.out.print("First " + n + " Fibonacci numbers: ");
+        for (int num : fibArray) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
