@@ -1,0 +1,29 @@
+Implement a method that takes a List as an argument and removes every second element from the list, then prints the resulting list.
+import java.util.ArrayList;
+import java.util.List;
+
+public class RemoveEverySecondElement {
+
+    public static void removeEverySecond(List<?> list) {
+        List<Object> result = new ArrayList<>();
+
+        for (int i = 0; i < list.size(); i++) {
+            if (i % 2 == 0) {
+                result.add(list.get(i));
+            }
+        }
+
+        System.out.println("Resulting list after removing every second element:");
+        System.out.println(result);
+    }
+
+    public static void main(String[] args) {
+
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 1; i <= 10; i++) {
+            numbers.add(i);
+        }
+
+        removeEverySecond(numbers);
+    }
+}
