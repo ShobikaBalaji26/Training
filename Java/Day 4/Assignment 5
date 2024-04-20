@@ -1,0 +1,91 @@
+a. Create a CustomStack class with operations Push, Pop, Peek, and IsEmpty. Demonstrate its LIFO behavior by pushing integers onto the stack, then popping and displaying them until the stack is empty.
+public class CustomStack {
+    private int[] stack;
+    private int top;
+    private int capacity;
+
+    public CustomStack(int capacity) {
+        this.capacity = capacity;
+        this.stack = new int[capacity];
+        this.top = -1; // Initialize top index to -1 (empty stack)
+    }
+
+    public void push(int element) {
+        if (top < capacity - 1) {
+            stack[++top] = element;
+            System.out.println("Pushed " + element + " onto the stack.");
+        } else {
+            System.out.println("Stack overflow! Cannot push " + element + ".");
+        }
+    }
+
+    public int pop() {
+        if (top >= 0) {
+            int popped = stack[top--];
+            System.out.println("Popped " + popped + " from the stack.");
+            return popped;
+        } else {
+            System.out.println("Stack underflow! Cannot pop from an empty stack.");
+            return -1; // Return -1 to indicate an error or empty stack
+        }
+    }
+
+    public int peek() {
+        if (top >= 0) {
+            System.out.println("Top element of the stack is: " + stack[top]);
+            return stack[top];
+        } else {
+            System.out.println("Stack is empty! No top element to peek.");
+            return -1; // Return -1 to indicate an error or empty stack
+        }
+    }
+
+    public boolean isEmpty() {
+        return (top == -1);
+    }
+
+    public static void main(String[] args) {
+        CustomStack stack = new CustomStack(5);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+
+        while (!stack.isEmpty()) {
+            stack.pop();
+        }
+    }
+}
+
+
+b. Develop a CustomQueue class with methods for Enqueue, Dequeue, Peek, and IsEmpty. Show how your queue can handle different data types by enqueuing strings and integers, then dequeuing and displaying them to confirm FIFO order.
+public class CustomQueue<T> {
+    private Object[] queue;
+    private int front;
+    private int rear;
+    private int size;
+    private int capacity;
+
+  
+    public CustomQueue(int capacity) {
+        this.capacity = capacity;
+        this.queue = new Object[capacity];
+        this.front = 0;
+        this.rear = -1;
+        this.size = 0;
+    }
+
+  
+    public void enqueue(T element) {
+        if (size < capacity) {
+            rear = (rear + 1) % capacity;
+            queue[rear] = element;
+            size++;
+            System.out.println("Enqueued: " + element);
+        } else {
+            System.out.println("Queue is full! Cannot enqueue.");
+        }
+    }
+
+
