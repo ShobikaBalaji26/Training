@@ -1,0 +1,30 @@
+Write a method that takes two strings, concatenates them, reverses the result, and then extracts the middle substring of the given length. Ensure your method handles edge cases, such as an empty string or a substring length larger than the concatenated string
+
+
+public class StringManipulation {
+
+    public static String getMiddleSubstring(String str1, String str2, int length) {
+       
+        String concatenated = str1.concat(str2);
+
+        String reversed = new StringBuilder(concatenated).reverse().toString();
+
+        if (reversed.isEmpty() || length > reversed.length()) {
+            return "Invalid input: substring length is larger than the concatenated string or empty input";
+        }
+        int startIndex = (reversed.length() - length) / 2;
+
+        String middleSubstring = reversed.substring(startIndex, startIndex + length);
+
+        return middleSubstring;
+    }
+
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+        int length = 5;
+
+        String result = getMiddleSubstring(str1, str2, length);
+        System.out.println("Middle substring: " + result);
+    }
+}
