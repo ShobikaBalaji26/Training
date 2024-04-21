@@ -1,0 +1,41 @@
+Create a program that generates and displays all prime numbers within a specified range (e.g., between 1 and 100). Use nested loops to iterate through each number in the range and determine if it's a prime number. A prime number is a whole number greater than 1 that has no positive divisors other than 1 and itself.
+
+import java.util.Scanner;
+
+public class PrimeNumberGenerator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Prime Number Generator");
+        System.out.print("Enter the start of the range: ");
+        int start = scanner.nextInt();
+
+        System.out.print("Enter the end of the range: ");
+        int end = scanner.nextInt();
+
+        System.out.println("Prime numbers between " + start + " and " + end + " are:");
+
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                System.out.println(i);
+            }
+        }
+
+        scanner.close();
+    }
+
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
