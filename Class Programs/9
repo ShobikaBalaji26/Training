@@ -1,0 +1,17 @@
+Bank:
+package CustomException;
+
+import bank.Savingsaccount;
+
+public class BankDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Savingsaccount savingaccount=new Savingsaccount("SAFGGT123",10000.0,5.0);
+        savingaccount.disPlay();
+        savingaccount.deposit(500.0);
+        savingaccount.withdraw(400.0);
+        savingaccount.disPlay();
+       }
+
+}
