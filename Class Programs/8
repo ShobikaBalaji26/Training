@@ -1,0 +1,38 @@
+CustomException:
+
+
+package CustomException;
+
+public class Account {
+	private String accnumber;
+	protected double balance;
+	public Account(String accnumber, double balance) {
+		super();
+		this.accnumber = accnumber;
+		this.balance = balance;
+	}
+	public void deposit(double amount) {
+		balance=balance+amount;
+		System.out.println("balance is"+balance);
+	}
+	public void withdraw(double amount) {
+		try {
+		if(balance<800.0) {
+			throw new insufficientbalance("balance is less");
+
+		}
+		
+		else {
+			
+				balance=balance-amount;
+			}
+		}catch(insufficientbalance e) {
+       	 System.out.println("balanceis insufficient");
+   }
+}
+	public void disPlay() {
+		System.out.println("accountnumber:"+accnumber);
+		System.out.println("balance is"+balance);
+	}
+
+}
