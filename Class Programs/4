@@ -1,0 +1,27 @@
+Write a program to generate the Fibonacci sequence up to a specified number of terms. The Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum of the two preceding numbers (0, 1, 1, 2, 3, 5, 8, 13, ...). Prompt the user to enter the number of terms they want to generate and use a loop to calculate and output the sequence.
+
+import java.util.Scanner;
+
+public class FibonacciSequence {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of terms in the Fibonacci sequence: ");
+        int numberOfTerms = scanner.nextInt();
+
+        System.out.println("Fibonacci sequence of " + numberOfTerms + " terms:");
+
+        int firstTerm = 0;
+        int secondTerm = 1;
+
+        for (int i = 1; i <= numberOfTerms; i++) {
+            System.out.print(firstTerm + " ");
+
+            int nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+
+        scanner.close();
+    }
+}
